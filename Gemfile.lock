@@ -39,6 +39,8 @@ GEM
     arel (6.0.4)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.2.0.0)
+      sass (~> 3.2)
     builder (3.2.2)
     byebug (9.0.6)
     coderay (1.1.1)
@@ -87,6 +89,7 @@ GEM
     multi_json (1.12.1)
     nokogiri (1.7.0)
       mini_portile2 (~> 2.1.0)
+    pg (0.18.4)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -164,12 +167,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)
   erb2haml
   haml
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   pry
   rails (= 4.2.6)
   sass-rails (~> 5.0)
