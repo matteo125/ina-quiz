@@ -14,6 +14,15 @@
   .field.form-control
     = f.label "scegli la"
     = f.select :score, [["ciao", "1"],["pirla", "2"]]
+  .field.form-control
+    = f.label :question_1
+    = f.select :question_1, [["ciao", "1"],["pirla", "2"]]
+  .field.form-control
+    = f.label :question_2
+    = f.select :question_2, [["ciao", "1"],["pirla", "2"]]
+  .field.form-control
+    = f.label :question_3
+    = f.select :question_3, [["ciao", "1"],["pirla", "2"]]
   .actions
     = f.submit
   -# .dropdown

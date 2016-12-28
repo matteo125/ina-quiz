@@ -5,6 +5,22 @@
 %p
   %strong Score:
   = @quiz.score
+%p
+  %strong question_1:
+  = @quiz.question_1
+%p
+  %strong question_2:
+  = @quiz.question_2
+%p
+  %strong question_3:
+  = @quiz.question_3
+%p
+  %strong Punteggio finale:
+  -# mettere qui un when case a seconda del punteggio ti da una frase
+  - if @quiz.sum_score > 2
+    = @quiz.sum_score
+  - else
+    = "va cagare dai pirla"
 = link_to 'Edit', edit_quiz_path(@quiz)
 |
 \#{link_to 'Back', quizzes_path}

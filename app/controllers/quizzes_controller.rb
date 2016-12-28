@@ -69,7 +69,7 @@ class QuizzesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quiz_params
-      params.require(:quiz).permit(:answer, :score)
+      params.require(:quiz).permit(:answer, :score, :question_1, :question_2, :question_3)
     end
 
     def set_locale
