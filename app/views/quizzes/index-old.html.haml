@@ -1,15 +1,15 @@
 %p#notice= notice
-%h1 Questionario d'amore
+%h1 Listing Quizzes
 %table
   %thead
     %tr
-      -# %th Answer
-      %th= I18n.t('score')
+      %th Answer
+      %th Score
       %th{:colspan => "3"}
   %tbody
     - @quizzes.each do |quiz|
       %tr
-        -# %td= quiz.answer
+        %td= quiz.answer
         %td= quiz.score
         %td= link_to 'Show', quiz
         %td= link_to 'Edit', edit_quiz_path(quiz)

@@ -1,5 +1,5 @@
 class QuizzesController < ApplicationController
-  before_action :set_quiz, only: [:show, :edit, :update, :destroy]
+  before_action :set_locale, :set_quiz, only: [:show, :edit, :update, :destroy]
 
   # GET /quizzes
   # GET /quizzes.json
@@ -70,5 +70,9 @@ class QuizzesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def quiz_params
       params.require(:quiz).permit(:answer, :score)
+    end
+
+    def set_locale
+      I18n.locale = params[:it] || I18n.default_locale
     end
 end

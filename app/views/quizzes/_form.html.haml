@@ -7,13 +7,26 @@
       %ul
         - @quiz.errors.full_messages.each do |message|
           %li= message
-  .field
-    = f.label :answer
-    %br/
-    = f.number_field :answer
-  .field
-    = f.label :score
-    %br/
-    = f.number_field :score
+  -# inizio input
+  .field.form-control
+    = f.label "scegli la"
+    = f.select :answer, [["ciao", "1"],["pirla", "2"]]
+  .field.form-control
+    = f.label "scegli la"
+    = f.select :score, [["ciao", "1"],["pirla", "2"]]
   .actions
     = f.submit
+  -# .dropdown
+  -#   %button#dropdownMenu1.btn.btn-default.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+  -#     Dropdown
+  -#     %span.caret
+  -#   %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1"}
+  -#     %li
+  -#       %a{:href => "#"} Action
+  -#     %li
+  -#       %a{:href => "#"} Another action
+  -#     %li
+  -#       %a{:href => "#"} Something else here
+  -#     %li.divider{:role => "separator"}
+  -#     %li
+  -#       %a{:href => "#"} Separated link
