@@ -8,26 +8,31 @@
         - @quiz.errors.full_messages.each do |message|
           %li= message
   -# inizio input
-  .field.form-control
-    = f.label "scegli la"
-    = f.select :answer, [["ciao", "1"],["pirla", "2"]]
-  .field.form-control
-    = f.label "scegli la"
-    = f.select :score, [["ciao", "1"],["pirla", "2"]]
-  .field.form-control
-    = f.label :question_1
-    = f.select :question_1, [["ciao", "1"],["pirla", "2"]]
-  .field.form-control
-    = f.label :question_2
-    = f.select :question_2, [["ciao", "1"],["pirla", "2"]]
-  .field.form-control
-    = f.label :question_3
-    = f.select :question_3, [["ciao", "1"],["pirla", "2"]]
+  .field.form-group
+    = f.label I18n.t('question_1')
+    %br
+    = f.select :answer, [["scegli", "0"],["ciao sei per caso scemo", "1"],["pirla", "2"]], {}, {class: "form-control"}
+  .field.form-group
+    = f.label I18n.t('question_2')
+    %br
+    = f.select :score, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
+  .field.form-group
+    = f.label I18n.t('question_3')
+    %br
+    = f.select :question_1, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
+  .field.form-group
+    = f.label I18n.t('question_4')
+    %br
+    = f.select :question_2, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
+  .field.form-group
+    = f.label I18n.t('question_5')
+    %br
+    = f.select :question_3, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .action
     = f.button :submit, class: "btn btn-success"
   -# .btn-group
   -#   = button_tag link_to 'New Quiz', new_quiz_path, class: "btn btn-success"
-
+  -# 
   -# .dropdown
   -#   %button#dropdownMenu1.btn.btn-default.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
   -#     Dropdown
