@@ -23,8 +23,11 @@
   .field.form-control
     = f.label :question_3
     = f.select :question_3, [["ciao", "1"],["pirla", "2"]]
-  .actions
-    = f.submit
+  .action
+    = f.button :submit, class: "btn btn-success"
+  -# .btn-group
+  -#   = button_tag link_to 'New Quiz', new_quiz_path, class: "btn btn-success"
+
   -# .dropdown
   -#   %button#dropdownMenu1.btn.btn-default.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
   -#     Dropdown

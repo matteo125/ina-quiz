@@ -1,26 +1,16 @@
 %p#notice= notice
 %p
-  %strong Answer:
-  = @quiz.answer
-%p
-  %strong Score:
-  = @quiz.score
-%p
-  %strong question_1:
-  = @quiz.question_1
-%p
-  %strong question_2:
-  = @quiz.question_2
-%p
-  %strong question_3:
-  = @quiz.question_3
-%p
   %strong Punteggio finale:
   -# mettere qui un when case a seconda del punteggio ti da una frase
-  - if @quiz.sum_score > 2
-    = @quiz.sum_score
-  - else
-    = "va cagare dai pirla"
+  -# domande previste 5 con un massimo di 3 risposte con un punteggio da 1 a 3
+  -# switch case con 5 stati
+  - case @quiz.sum_score
+  - when 1..5
+    = "ciao son 5"
+  - when 6..8
+    = "pillamatonna"
+  - when 9..15
+    = "pillamatonna!!11!!1!!"
 = link_to 'Edit', edit_quiz_path(@quiz)
 |
 \#{link_to 'Back', quizzes_path}

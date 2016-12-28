@@ -1,3 +1,4 @@
-%h1 New Quiz
+%h1=I18n.t('new_title')
 = render 'form'
-= link_to 'Back', quizzes_path
+.btn-group
+  = button_tag link_to 'Back', quizzes_path, class: "btn btn-primary"
