@@ -15,7 +15,7 @@
     -# se non riesci a sistemare togliere il ciclo e mostrare solo l'ultimo @quizzes.find(1).question_2
     - @quizzes.each do |quiz|
       %tr
-        %td= quiz.question_1 + quiz.question_2 + quiz.question_3
+        %td= quiz.question_1 + quiz.question_2 + quiz.question_3 + quiz.question_4 + quiz.question_5
         %td= link_to I18n.t('actions.show'), quiz
         %td= link_to I18n.t('actions.edit'), edit_quiz_path(quiz)
         %td= link_to I18n.t('actions.destroy'), quiz, method: :delete, data: { confirm: 'Are you sure?' }
