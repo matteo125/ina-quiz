@@ -11,22 +11,22 @@
   .field.form-group
     = f.label I18n.t('questions.question_1')
     %br
-    = f.select :answer, [["scegli", "0"],["ciao sei per caso scemo", "1"],["pirla", "2"]], {}, {class: "form-control"}
+    = f.select :question_1, [["scegli", "0"],["ciao sei per caso scemo", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .field.form-group
     = f.label I18n.t('questions.question_2')
     %br
-    = f.select :score, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
+    = f.select :question_2, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .field.form-group
     = f.label I18n.t('questions.question_3')
     %br
-    = f.select :question_1, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
+    = f.select :question_3, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .field.form-group
     = f.label I18n.t('questions.question_4')
     %br
-    = f.select :question_2, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
+    = f.select :question_4, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .field.form-group
     = f.label I18n.t('questions.question_5')
     %br
-    = f.select :question_3, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
+    = f.select :question_5, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .action
     = f.button :submit, class: "btn btn-success"

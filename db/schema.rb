@@ -17,13 +17,18 @@ ActiveRecord::Schema.define(version: 20161228150121) do
   enable_extension "plpgsql"
 
   create_table "quizzes", force: :cascade do |t|
-    t.integer  "answer"
+    t.integer  "tester"
     t.integer  "score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer  "question_1"
     t.integer  "question_2"
     t.integer  "question_3"
+    t.integer  "question_4"
+    t.integer  "question_5"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "question_6"
+    t.integer  "question_7"
+    t.integer  "question_8"
   end
 
 end
