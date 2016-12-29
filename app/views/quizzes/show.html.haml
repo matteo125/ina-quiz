@@ -5,15 +5,15 @@
       Babbo Natale ha detto:
     %blockquote.blockquote-reverse
       - case @quiz.score
-      - when 0..2
+      - when 0..6
         = I18n.t('answer.very_bad')
-      - when 3..5
+      - when 7..13
         = I18n.t('answer.bad')
-      - when 6..8
+      - when 14..18
         = I18n.t('answer.mediocre')
-      - when 9..14
+      - when 19..23
         = I18n.t('answer.good')
-      - when 15
+      - when 24
         = I18n.t('answer.love')
     .btn-group.btn-lg
       = button_tag link_to I18n.t('actions.edit'), edit_quiz_path(@quiz), class: "btn btn-primary btn-lg"
