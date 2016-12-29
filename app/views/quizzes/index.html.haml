@@ -1,4 +1,4 @@
-%p#notice= notice
+-# %p#notice= notice
 %h1.page-header=I18n.t('title')
 %table.table.table-striped
   %thead
@@ -7,8 +7,6 @@
       %th{:colspan => "3"}
   %tbody
     -# mettere un limite al ciclo di 10 elementi
-    -# i punteggi sono tutti uguali: mostrarli per id (che continuano a incrementare)
-    -# se non riesci a sistemare togliere il ciclo e mostrare solo l'ultimo @quizzes.find(1).question_2
     - @quizzes.each do |quiz|
       %tr
         %td= quiz.score
