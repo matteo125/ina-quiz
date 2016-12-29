@@ -2,6 +2,6 @@
   .container
     %h1= I18n.t('new_quiz')
     = render 'form'
-    .btn-group
+    .btn-group.back-button
       -# = button_tag link_to I18n.t('actions.show'), @quiz, class: "btn btn-primary"
-      = button_tag link_to I18n.t('actions.back'), quizzes_path, class: "btn btn-primary btn-lg"
+      = button_tag link_to I18n.t('actions.back'), quizzes_path, class: "btn btn-primary btn-lg", style: "margin-bottom: 40px;"

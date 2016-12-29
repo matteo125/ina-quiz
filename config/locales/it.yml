@@ -3,7 +3,7 @@ it:
   new_title: "Iniziamo!"
   score: "Giudizio"
   final_result: "Il mio giudizio è il seguente:"
-  new_quiz: "Prova di nuovo"
+  new_quiz: "Ritenta"
   actions:
     show: "Risultato"
     edit: "Modifica"
