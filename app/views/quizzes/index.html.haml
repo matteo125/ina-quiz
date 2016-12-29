@@ -1,9 +1,12 @@
 %p#notice= notice
 %h1.page-header=I18n.t('title')
+%h4
+  = I18n.t('final_result')
+  -# %br
+  = @quizzes.last.sum_score
 %table.table.table-striped
   %thead
     %tr
-      -# %th Answer
       %th= I18n.t('score')
       %th{:colspan => "3"}
   %tbody
@@ -12,10 +15,9 @@
     -# se non riesci a sistemare togliere il ciclo e mostrare solo l'ultimo @quizzes.find(1).question_2
     - @quizzes.each do |quiz|
       %tr
-        %td= quiz.sum_score
-        %td= link_to 'Show', quiz
-        %td= link_to 'Edit', edit_quiz_path(quiz)
-        %td= link_to 'Destroy', quiz, method: :delete, data: { confirm: 'Are you sure?' }
-%br
+        %td= quiz.question_1 + quiz.question_2 + quiz.question_3
+        %td= link_to I18n.t('actions.show'), quiz
+        %td= link_to I18n.t('actions.edit'), edit_quiz_path(quiz)
+        %td= link_to I18n.t('actions.destroy'), quiz, method: :delete, data: { confirm: 'Are you sure?' }
 .btn-group
-  = button_tag link_to 'New Quiz', new_quiz_path, class: "btn btn-success"
+  = button_tag link_to I18n.t('new_quiz'), new_quiz_path, class: "btn btn-success"

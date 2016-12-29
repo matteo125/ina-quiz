@@ -1,17 +1,24 @@
 // Place all the styles related to the Quizzes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$gold: #d2c65e
+$gold-darken: #c7bc58
 button
   border: 0
   padding: 0
-.container
-  background: url("images/blue-snow-falling.png")
+body
+  background: url("blue-snow-falling.png")
+  background-repeat: no-repeat
 .action
   padding: 10px 0
 .btn-group
   padding: 10px 0
 .btn
   color: #fff!important
-@media screen and (max-width: 360px)
+.btn-success
+  background-color: $gold
+  border-color: $gold-darken
+@media screen and (max-width: 480px)
   body
-    background-color: #fff
+    background-size: 490px
+    background-position-y: 280px
