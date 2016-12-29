@@ -1,7 +1,15 @@
-.home-container
-  %h1.home-title Babbo Natale vuole farti un test
-  %p Sei fidanzata con Matteo Revelli giusto? Lo ami abbastanza?
-  .btn-group.home-center-button
-    = button_tag link_to 'vai al quiz', new_quiz_path, class: "btn btn-success btn-lg"
-  -# .action.btn-group.home-center-button
-  -#   %button.btn.btn-success.btn-lg= link_to 'vai al quiz', new_quiz_path
+%body#bg-home-page
+  .container
+    .home-container
+      %h1.home-title
+        Buone Feste!
+      %h4.home-title{style: "font-size: 20px;"}
+        Ciao Ina, sono Babbo Natale
+      %p#home-text-body
+        Sei fidanzata con Matteo Revelli giusto? Lo ami abbastanza?
+        %br
+        Beh io non ne sono sicuro. Perciò ti ho preparato alcune domande per verificare il tuo amore.
+      .btn-group.home-center-button
+        = button_tag link_to 'Vai al quiz', new_quiz_path, class: "btn btn-success btn-lg"
+      -# .action.btn-group.home-center-button
+      -#   %button.btn.btn-success.btn-lg= link_to 'vai al quiz', new_quiz_path

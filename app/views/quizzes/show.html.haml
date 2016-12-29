@@ -1,18 +1,20 @@
--# %p#notice= notice
-%h4.show-title
-  Babbo Natale ha detto:
-%blockquote.blockquote-reverse
-  - case @quiz.score
-  - when 0..2
-    = I18n.t('answer.very_bad')
-  - when 3..5
-    = I18n.t('answer.bad')
-  - when 6..8
-    = I18n.t('answer.mediocre')
-  - when 9..14
-    = I18n.t('answer.good')
-  - when 15
-    = I18n.t('answer.love')
-.btn-group.btn-lg
-  = button_tag link_to I18n.t('actions.edit'), edit_quiz_path(@quiz), class: "btn btn-primary btn-lg"
-  = button_tag link_to I18n.t('actions.back'), quizzes_path, class: "btn btn-primary btn-lg"
+%body
+  .container
+    -# %p#notice= notice
+    %h4.show-title
+      Babbo Natale ha detto:
+    %blockquote.blockquote-reverse
+      - case @quiz.score
+      - when 0..2
+        = I18n.t('answer.very_bad')
+      - when 3..5
+        = I18n.t('answer.bad')
+      - when 6..8
+        = I18n.t('answer.mediocre')
+      - when 9..14
+        = I18n.t('answer.good')
+      - when 15
+        = I18n.t('answer.love')
+    .btn-group.btn-lg
+      = button_tag link_to I18n.t('actions.edit'), edit_quiz_path(@quiz), class: "btn btn-primary btn-lg"
+      = button_tag link_to I18n.t('actions.back'), quizzes_path, class: "btn btn-primary btn-lg"

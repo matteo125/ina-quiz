@@ -1,4 +1,6 @@
-%h1.page-header=I18n.t('new_title')
-= render 'form'
-.btn-group
-  = button_tag link_to I18n.t('actions.back'), quizzes_path, class: "btn btn-primary btn-lg"
+%body
+  .container
+    %h1.page-header=I18n.t('new_title')
+    = render 'form'
+    .btn-group
+      = button_tag link_to I18n.t('actions.back'), quizzes_path, class: "btn btn-primary btn-lg"

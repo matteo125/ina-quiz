@@ -1,7 +1,7 @@
 it:
   title: "Questionario"
   new_title: "Iniziamo!"
-  score: "Punteggio"
+  score: "Giudizio"
   final_result: "Il mio giudizio è il seguente:"
   new_quiz: "Prova di nuovo"
   actions:

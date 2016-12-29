@@ -1,22 +1,30 @@
--# %p#notice= notice
-%h1.page-header=I18n.t('title')
-%table.table.table-striped
-  %thead
-    %tr
-      %th= I18n.t('score')
-      %th{:colspan => "3"}
-  %tbody
-    -# mettere un limite al ciclo di 10 elementi
-    - @quizzes.each do |quiz|
-      %tr
-        %td
-          -# fare uno switch case
-          - if quiz.score > 4
-            = "mettere primo pezz"
-          - else
-            = "zzo di frase"
-        %td= link_to I18n.t('actions.show'), quiz
-        %td= link_to I18n.t('actions.edit'), edit_quiz_path(quiz)
-        %td= link_to I18n.t('actions.destroy'), quiz, method: :delete, data: { confirm: 'Are you sure?' }
-.btn-group.action
-  = button_tag link_to I18n.t('new_quiz'), new_quiz_path, class: "btn btn-success btn-lg"
+%body
+  .container
+    -# %p#notice= notice
+    %h1.page-header=I18n.t('title')
+    %table.table.table-striped
+      %thead
+        %tr
+          %th= I18n.t('score')
+          %th{:colspan => "3"}
+      %tbody
+        -# mettere un limite al ciclo di 10 elementi
+        - @quizzes.each do |quiz|
+          %tr
+            %td
+              - case quiz.score
+              - when 0..2
+                = I18n.t('answer.very_bad').slice(0..7) + "..."
+              - when 3..5
+                = I18n.t('answer.bad').slice(0..9) + "..."
+              - when 6..8
+                = I18n.t('answer.mediocre').slice(0..9) + "..."
+              - when 9..14
+                = I18n.t('answer.good').slice(0..9) + "..."
+              - when 15
+                = I18n.t('answer.love').slice(0..9) + "..."
+            %td= link_to I18n.t('actions.show'), quiz
+            %td= link_to I18n.t('actions.edit'), edit_quiz_path(quiz)
+            %td= link_to I18n.t('actions.destroy'), quiz, method: :delete, data: { confirm: 'Are you sure?' }
+    .btn-group.action
+      = button_tag link_to I18n.t('new_quiz'), new_quiz_path, class: "btn btn-success btn-lg"
