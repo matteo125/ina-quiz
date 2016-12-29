@@ -9,7 +9,12 @@
     -# mettere un limite al ciclo di 10 elementi
     - @quizzes.each do |quiz|
       %tr
-        %td= quiz.score
+        %td
+          -# fare uno switch case
+          - if quiz.score > 4
+            = "mettere primo pezz"
+          - else
+            = "zzo di frase"
         %td= link_to I18n.t('actions.show'), quiz
         %td= link_to I18n.t('actions.edit'), edit_quiz_path(quiz)
         %td= link_to I18n.t('actions.destroy'), quiz, method: :delete, data: { confirm: 'Are you sure?' }

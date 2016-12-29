@@ -29,4 +29,4 @@
     %br
     = f.select :question_5, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .action
-    = f.button :submit, class: "btn btn-success btn-lg"
+    = f.button I18n.t('actions.submit'), class: "btn btn-success btn-lg"

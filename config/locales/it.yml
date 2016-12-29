@@ -30,6 +30,7 @@ it:
     edit: "Modifica"
     destroy: "Scancella"
     back: "Indietro"
+    submit: "Vediamo se mi ami..."
   questions:
     question_1: "Prima domanda"
     question_2: "Seconda domanda"
