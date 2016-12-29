@@ -29,9 +29,16 @@ it:
     show: "Risultato"
     edit: "Modifica"
     destroy: "Scancella"
+    back: "Indietro"
   questions:
     question_1: "Prima domanda"
     question_2: "Seconda domanda"
     question_3: "Terza domanda"
     question_4: "Quarta domanda"
     question_5: "Quinta domanda"
+  answer:
+    very_bad: "molto male per dio..."
+    bad: "sembra che non mi conosci"
+    mediocre: "ok ma ne sapeva più quella che mi sono fatto in vacanza 2 anni fa"
+    good: "brava allora forse c'è feeling chiama il 48088 per scoprirlo"
+    love: "mi ami"

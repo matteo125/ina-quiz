@@ -28,6 +28,9 @@ heroku pg:reset
 far andare le migrate su heroku:
 heroku run:detached rake db:migrate --app ina-quiz
 
+css su heroku se non funzionano:
+bundle exec rake assets:precompile IN LOCALE
+git push heroku master
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

@@ -1,5 +1,5 @@
-%h1 Editing Quiz
+%h1= I18n.t('new_quiz')
 = render 'form'
-= link_to 'Show', @quiz
-|
-\#{link_to 'Back', quizzes_path}
+.btn-group
+  = button_tag link_to I18n.t('actions.show'), @quiz, class: "btn btn-primary"
+  = button_tag link_to I18n.t('actions.back'), quizzes_path, class: "btn btn-primary"

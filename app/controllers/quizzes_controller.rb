@@ -35,11 +35,13 @@ class QuizzesController < ApplicationController
         format.json { render json: @quiz.errors, status: :unprocessable_entity }
       end
     end
+    @quiz.save_score
   end
 
   # PATCH/PUT /quizzes/1
   # PATCH/PUT /quizzes/1.json
   def update
+    @quiz.save_score
     respond_to do |format|
       if @quiz.update(quiz_params)
         format.html { redirect_to @quiz, notice: 'Quiz was successfully updated.' }
