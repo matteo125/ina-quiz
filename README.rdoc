@@ -30,6 +30,7 @@ heroku run:detached rake db:migrate --app ina-quiz
 
 css su heroku se non funzionano:
 bundle exec rake assets:precompile IN LOCALE
+git status, add, commit, push e poi
 git push heroku master
 
 Please feel free to use a different markup language if you do not plan to run
