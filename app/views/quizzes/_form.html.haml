@@ -9,23 +9,23 @@
           %li= message
   -# inizio input
   .field.form-group
-    = f.label I18n.t('questions.question_1')
+    = f.label I18n.t('questions.question_1'), class: "question-label"
     %br
     = f.select :question_1, [["scegli", "0"],["ciao sei per caso scemo", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .field.form-group
-    = f.label I18n.t('questions.question_2')
+    = f.label I18n.t('questions.question_2'), class: "question-label"
     %br
     = f.select :question_2, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .field.form-group
-    = f.label I18n.t('questions.question_3')
+    = f.label I18n.t('questions.question_3'), class: "question-label"
     %br
     = f.select :question_3, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .field.form-group
-    = f.label I18n.t('questions.question_4')
+    = f.label I18n.t('questions.question_4'), class: "question-label"
     %br
     = f.select :question_4, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .field.form-group
-    = f.label I18n.t('questions.question_5')
+    = f.label I18n.t('questions.question_5'), class: "question-label"
     %br
     = f.select :question_5, [["scegli", "0"],["ciao", "1"],["pirla", "2"]], {}, {class: "form-control"}
   .action
