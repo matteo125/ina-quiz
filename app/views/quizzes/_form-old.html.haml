@@ -1,0 +1,53 @@
+= form_for(@quiz) do |f|
+  - if @quiz.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@quiz.errors.count, "error")
+        prohibited this quiz from being saved:
+      %ul
+        - @quiz.errors.full_messages.each do |message|
+          %li= message
+  -# inizio input
+  -# question_1
+  .field.form-group
+    = f.label I18n.t('questions.question_1'), class: "question-label"
+    %br
+    = f.select :question_1, [["scegli", "0"],["Mugubumbi", "1"],["Bujumbura", "3"],["Amukulelé", "1"]], {}, {class: "form-control"}
+  -# question_2
+  .field.form-group
+    = f.label I18n.t('questions.question_2'), class: "question-label"
+    %br
+    = f.select :question_2, [["scegli", "0"],["17 Novembre", "3"],["22 Novembre", "1"],["13 Ottobre", "0"]], {}, {class: "form-control"}
+  -# question_3
+  .field.form-group
+    = f.label I18n.t('questions.question_3'), class: "question-label"
+    %br
+    = f.select :question_3, [["scegli", "0"],["Si è messo a piangere e ha gridato 'why always me!'", "1"],["L'ha detto a tutti", "2"],["Ti ha castigata con il dono per 30 volte", "3"]], {}, {class: "form-control"}
+  -# question_4
+  .field.form-group
+    = f.label I18n.t('questions.question_4'), class: "question-label"
+    %br
+    = f.select :question_4, [["scegli", "0"],["Ina Talpa", "3"],["Matteo Revelli", "1"],["Michela Ricci", "0"]], {}, {class: "form-control"}
+  -# question_5
+  .field.form-group
+    = f.label I18n.t('questions.question_5'), class: "question-label"
+    %br
+    = f.select :question_5, [["scegli", "0"],["Piaggio", "0"],["Honda", "1"],["Yamaha", "3"]], {}, {class: "form-control"}
+  -# question_6
+  .field.form-group
+    = f.label I18n.t('questions.question_6'), class: "question-label"
+    %br
+    = f.select :question_6, [["scegli", "0"],["Incapacità di dire le doppie", "2"],["L'incapacità nel raggruppare in un singolo messaggio su WhatsApp una frase di senso compiuto", "3"],["Non saper cucinare niente, eccetto l'insalata col tonno", "1"]], {}, {class: "form-control"}
+  -# question_7
+  .field.form-group
+    = f.label I18n.t('questions.question_7'), class: "question-label"
+    %br
+    = f.select :question_7, [["scegli", "0"],["400€ e 5h", "0"],["450€ e 8h", "0"],["520€ e 20h", "3"]], {}, {class: "form-control"}
+  -# question_8
+  .field.form-group
+    = f.label I18n.t('questions.question_8'), class: "question-label"
+    %br
+    = f.select :question_8, [["scegli", "0"],["Sì, lui è fedele come un cane col suo padrone", "0"],["Non lo so, ho paura che tocchi i culi quà e là", "1"],["No. Se le fa tutte, anche più di una volta e contemporaneamente", "3"]], {}, {class: "form-control"}
+  -# bottone
+  .action
+    = f.button I18n.t('actions.submit'), class: "btn btn-success btn-lg", style: "margin-top: 30px;"

@@ -1,0 +1,27 @@
+it:
+  title: "Questionario"
+  new_title: "Iniziamo!"
+  score: "Giudizio"
+  final_result: "Il mio giudizio è il seguente:"
+  new_quiz: "Ritenta"
+  actions:
+    show: "Risultato"
+    edit: "Modifica"
+    destroy: "Scancella"
+    back: "Indietro"
+    submit: "Vediamo se mi ami..."
+  questions:
+    question_1: "Qual è la capitale dello stato africano del Burundi?"
+    question_2: "Quando cade il vostro anniversario?"
+    question_3: "Quando il tuo fidanzato ha scoperto che avevi 30 anni, qual è stata la sua reazione?"
+    question_4: 'Chi pronunciò la famosa frase "Where is my gift?"'
+    question_5: "Qual è la casa produttrice della sua moto?"
+    question_6: "Qual è la caratteristica/modo di fare che più odia di te"
+    question_7: "Matteo ha deciso di soddisfare il tuo essere venale e materialista, facendoti molti regali: sapresti quantificare il denaro e il tempo speso?"
+    question_8: "L'amore si basa sulla fiducia. Lasceresti il tuo fidanzato da solo con 10 ragazze?"
+  answer:
+    very_bad: "Sembra che tu non conosca Matteo Revelli. È un ragazzo simpatico, alto e con 18cm di felicità. Te lo presento?"
+    bad: "Conosci il tuo ragazzo quanto il funzionamento di un motore a scoppio. Si sai che esistono i pistoni e che la benzina fa boom boom pe pe pe. Fine."
+    mediocre: "Sei solita dire 'amo boh una cosa media'. Ecco quanto conosci di lui. Te lo meriti davvero un ragazzo così?"
+    good: "Brava sento che fra voi 2 c'è feeling. Il vostro amore andrà forte come il processore octa-core del tuo nuovo cellulare che ti ho portato..."
+    love: "L'amore che provi per lui è immenso, infinito, incalcolabile ed eterno. La vostra storia è solo all'inizio..."
